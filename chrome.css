@@ -1,4 +1,6 @@
-/* Extension Groups — header styling for the unified extensions panel. */
+/* Extension Groups — header styling for the extensions panel.
+   Works in Zen's site data panel (#zen-site-data-addons, a wrapping flex row
+   of icon tiles) and in the stock unified extensions panel (vertical list). */
 
 .extension-group-header {
   display: flex;
@@ -15,8 +17,7 @@
   cursor: pointer;
   user-select: none;
   min-width: 0;
-  /* When another mod lays the panel out as a grid of icons, make headers
-     span the full row instead of occupying one cell. */
+  /* Take a full row in both grid and wrapping-flex layouts. */
   grid-column: 1 / -1;
   flex-basis: 100%;
 }
@@ -60,7 +61,26 @@
   background: color-mix(in srgb, currentColor 20%, transparent);
 }
 
-/* Items hidden by a collapsed group. */
-unified-extensions-item[extension-groups-collapsed] {
-  display: none;
+/* Items hidden by a collapsed group. Matches both the custom element and
+   CustomizableUI toolbaritem widgets — both carry the class. */
+.unified-extensions-item[extension-groups-collapsed] {
+  display: none !important;
+}
+
+/* Zen's site data panel forces every child of the addons box into a
+   fixed-size icon tile (width/height/background on "> *", with higher
+   specificity than a plain class selector) — undo that for our headers. */
+#zen-site-data-addons .extension-group-header {
+  width: 100% !important;
+  height: auto !important;
+  margin: 6px 0 0 !important;
+  background-color: transparent !important;
+}
+
+#zen-site-data-addons .extension-group-header:hover {
+  background-color: color-mix(in srgb, currentColor 8%, transparent) !important;
+}
+
+#zen-site-data-addons .extension-group-header:first-child {
+  margin-top: 0 !important;
 }
