@@ -1,0 +1,22 @@
+{
+  "id": "extension-groups",
+  "name": "Extension Groups",
+  "description": "Organize the extensions panel with custom headers. Right-click any extension to move it into a group, click a header to collapse it.",
+  "homepage": "https://github.com/PulseRH/zen-extension-groups",
+  "preferences": "preferences.json",
+  "scripts": {
+    "extension-groups.uc.js": {
+      "include": ["chrome://browser/content/browser.xhtml"]
+    }
+  },
+  "style": {
+    "chrome": "chrome.css"
+  },
+  "readme": "https://raw.githubusercontent.com/PulseRH/zen-extension-groups/main/README.md",
+  "author": "PulseRH",
+  "version": "1.0.0",
+  "tags": ["extensions", "groups", "organization", "panel", "zen browser"],
+  "createdAt": "2026-06-12",
+  "updatedAt": "2026-06-12",
+  "fork": ["zen"]
+}

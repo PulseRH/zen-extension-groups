@@ -1,0 +1,40 @@
+[
+  {
+    "type": "text",
+    "label": "**Extension Groups**",
+    "size": "16px"
+  },
+  {
+    "type": "text",
+    "label": "Open the extensions panel, right-click an extension (or use its ··· menu) and pick *Move to group* to organize it. Click a group header in the panel to collapse or expand it.",
+    "size": "12px"
+  },
+  {
+    "type": "checkbox",
+    "property": "extension-groups.show-other-header",
+    "label": "Show a header above ungrouped extensions",
+    "defaultValue": true
+  },
+  {
+    "type": "string",
+    "property": "extension-groups.other-label",
+    "label": "Label for the ungrouped section",
+    "placeholder": "Other",
+    "defaultValue": "Other"
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "text",
+    "label": "*Advanced:* the full group layout is stored as JSON below. Groups appear in the panel in the order listed here. You normally never need to touch this — the right-click menu manages it for you.",
+    "size": "12px"
+  },
+  {
+    "type": "string",
+    "property": "extension-groups.groups",
+    "label": "Group configuration (JSON)",
+    "placeholder": "{\"Privacy\": [\"uBlock0@raymondhill.net\"], \"Dev\": [\"...\"]}",
+    "defaultValue": "{}"
+  }
+]
